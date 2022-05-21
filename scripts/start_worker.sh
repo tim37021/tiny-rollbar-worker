@@ -1,4 +1,7 @@
 #!/bin/sh
 # WORKING_DIR ..
-bundle exec sidekiq -r ./boot.rb -q rollbar -c 2
+CONF_WORKER_QUEUE=${WORKER_QUEUE:-rollbar}
+CONF_WORKER_CONCURRENCY=${WORKER_CONCURRENCY:-1}
+
+./bin/sidekiq -r ./boot.rb -q $CONF_WORKER_QUEUE -c $CONF_WORKER_CONCURRENCY
 
