@@ -1,0 +1,15 @@
+ARG BASE_RUBY_IMAGE=ruby:3.0-alpine3.14
+FROM $BASE_RUBY_IMAGE
+
+# RUN apt-get update && apt-get install git
+RUN apk add --update git
+
+WORKDIR /usr/src
+
+RUN git clone --recursive https://github.com/tim37021/tiny-rollbar-worker.git
+
+WORKDIR /usr/src/tiny-rollbar-worker
+
+RUN bundle install
+
+CMD ["./scripts/start_worker.sh"]
