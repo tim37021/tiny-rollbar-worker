@@ -1,3 +1,4 @@
+require_relative "bundle_exec"
 require 'optparse'
 
 options = {}

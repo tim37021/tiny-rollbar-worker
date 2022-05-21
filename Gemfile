@@ -18,5 +18,4 @@ end
 
 # This will be used in console mode
 group :console do
-  gem "pry"
 end
