@@ -17,3 +17,5 @@ end
 Sidekiq.configure_server do |config|
   config.redis = ConnectionPool.new(size: 10, &REDIS_CONN)
 end
+
+require "sidekiq-alive"

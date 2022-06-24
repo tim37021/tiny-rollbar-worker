@@ -11,6 +11,7 @@ gem "dotenv", "~> 2.7"
 gem "redis", "~> 4.6"
 gem "rake", "~> 13.0"
 gem "connection_pool", "~> 2.2"
+gem "sidekiq-alive", git: "https://github.com/Xfers/sidekiq-alive.git", tag: "v3.1.0"
 
 group :development do
   gem "pry"
