@@ -6,9 +6,7 @@ RUN apk add --update git
 
 WORKDIR /usr/src
 
-RUN git clone --recursive https://github.com/tim37021/tiny-rollbar-worker.git
-
-WORKDIR /usr/src/tiny-rollbar-worker
+COPY . . 
 
 RUN bundle install
 
