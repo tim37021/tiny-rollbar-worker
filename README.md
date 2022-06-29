@@ -20,7 +20,8 @@ docker build -t tiny-rollbar-worker --build-args BASE_RUBY_IMAGE=ruby:3.0.0 < Do
 - `WORKER_QUEUE=rollbar`
 - `REDIS_HOST=127.0.0.1`
 - `REDIS_PORT=6379`
-- `REDIS_DB=`
+- `REDIS_DB=0`
+- `REDIS_ENABLE_SSL=0`
 
 ## Stats
 With default settings, the container roughly takes 30MB memory. Image size=101MB

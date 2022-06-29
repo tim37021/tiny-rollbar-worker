@@ -1,11 +1,14 @@
 require "sidekiq"
 require "connection_pool"
 
+use_ssl = ENV["REDIS_ENABLE_SSL"] == "true" || ENV["REDIS_ENABLE_SSL"] == "1"
+
 REDIS_CONN = proc do
   Redis.new(
     host: ENV["REDIS_HOST"],
-    port: ENV["REDIS_PORT"],
-    db: ENV["REDIS_DB"],
+    port: ENV["REDIS_PORT"]&.to_i,
+    db: ENV["REDIS_DB"]&.to_i,
+    ssl: use_ssl,
     timeout: 180,
   )
 end
