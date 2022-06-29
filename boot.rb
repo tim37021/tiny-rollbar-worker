@@ -1,7 +1,7 @@
 require "dotenv"
 
 Dotenv.load
-APP_ENV = ENV["APP_ENV"] || :development
+APP_ENV = ENV["APP_ENV"]&.to_sym || :development
 
 Bundler.setup(:default, APP_ENV)
 

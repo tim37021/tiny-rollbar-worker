@@ -15,6 +15,7 @@ docker build -t tiny-rollbar-worker --build-args BASE_RUBY_IMAGE=ruby:3.0.0 < Do
 ```
 
 ## Environment Variables
+- `APP_ENV=development`
 - `ROLLBAR_ACCESS_TOKEN=`
 - `WORKER_CONCURRENY=1`
 - `WORKER_QUEUE=rollbar`
