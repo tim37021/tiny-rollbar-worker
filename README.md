@@ -7,11 +7,11 @@ Tiny Rollbar Worker
 
 ## Build
 ```bash
-docker build -t tiny-rollbar-worker < Dockerfiles/Dockerfile-alpine
+docker build -t tiny-rollbar-worker .
 ```
 or you can specify base image with `--build-args`, I would recommend to use offical ruby image
 ```bash
-docker build -t tiny-rollbar-worker --build-args BASE_RUBY_IMAGE=ruby:3.0.0 < Dockerfiles/Dockerfile-alpine
+docker build -t tiny-rollbar-worker --build-args BASE_RUBY_IMAGE=ruby:3.0.0 .
 ```
 
 ## Environment Variables
