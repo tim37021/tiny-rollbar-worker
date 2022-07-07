@@ -12,9 +12,9 @@ gem "redis", "~> 4.6"
 gem "rake", "~> 13.0"
 gem "connection_pool", "~> 2.2"
 gem "sidekiq-alive", git: "https://github.com/Xfers/sidekiq-alive.git", tag: "v3.1.0"
+gem "pry"
 
 group :development do
-  gem "pry"
 end
 
 # This will be used in console mode
